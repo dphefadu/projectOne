@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ballet&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+.navbar
+{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: #000;
+}
+body
+{
+    font-family: 'Poppins',sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+nav
+{
+    flex: 1;
+    text-align: center;  
+}
+h1 span
+{
+    font-family: 'Ballet',cursive;
+    font-size: 1em;
+}
+a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 200;
+}
+
+p{
+    color :#fff;
+}
+.header .contain
+{
+    max-width: 1330px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.row
+{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col-2
+{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.col-2 img
+{
+    max-width: 100%;
+    padding: 50px 0;
+    transition: 0.5s;
+}
+
+.col-2 h1 span
+{
+    font-family: 'Ballet',cursive;
+    font-size: 1em;
+}
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+.row .col-2 p
+{
+    text-align: left;
+    color: rgb(170, 169, 169);
+}
+.btn
+{
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s; 
+}
+.sticky
+{
+   /* background:  rgb(241, 85, 85); */
+   padding: 10px 100px;
+   box-shadow: 3px 5px 20px rgba(0,0,0,0.05);
+}
+
+.navbar
+{
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 100px;
+    z-index: 10000;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+.btn:hover
+{
+    background: #000;
+    font-weight: bold;
+}
+.header
+{
+    background:  radial-gradient(rgb(129, 140, 206),#000) ;
+  
+}
+.header .row
+{
+    margin-top: 70px;
+    color: #fff;
+}
+body
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+}
+.container
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .card
+{
+    position: relative;
+    width: 600px;
+    height: 350px;
+    margin: 20px;
+    display: flex;
+    transition: 0.5s;
+    justify-content: flex-start;
+    align-items: center;
+    background: linear-gradient(45deg,#1a2f3f,#7094ce);
+}
+.container .card img{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 400px;
+    transition: 0.5s;
+}
+.container .card:hover img
+{
+    left :73%;
+    height: 500px;
+}
+.container .card .content
+{
+    position: relative;
+    width :50%; 
+    left:20% ;
+    padding: 20px 20px 20px 40px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+
+}
+.container .card:hover .content
+{
+    left:0;
+    opacity: 1;
+    visibility: visible; 
+}
+.container .card .content h2
+{
+    color:#fff;
+    text-transform: uppercase;
+    font-size: 2.2em;
+    line-height: 1em;
+}
+.container .card .content p{
+    color: #fff;
+}
+.container .card .content a
+{
+    position: relative;
+    color: #111;
+    background: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: 700;
+
+}
+a
+{
+    position: relative;
+    color: #111;
+    background: #fff;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: 700;
+
+}
+
+@media (max-width:991px) {
+    .container .card
+    {
+        width: auto;
+        max-width: 600px;
+        align-items: flex-start;
+    }
+    .container .card:hover
+    {
+        height: 600px;
+    }
+    .container .card:hover img
+    {
+        left:50%;
+        height:350px;     
+    }
+    .container .card .content
+    {
+        width: 100%;
+        left: 0;
+        padding: 40px;
+    }
+}
+.modal-content
+{
+    background: transparent !important;
+    border: none !important;
+}
+@media (max-width:767px)
+{
+    .container 
+    {
+        flex-direction: column;
+    }
+    .container .card
+    {
+        margin: 40px 20px;
+    }
+}
+@media (max-width:420px)
+{
+    .container .card .content{
+        padding: 30px;
+    }
+    .container .card:hover img
+    {
+        height: 350px;
+    }
+}
